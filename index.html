@@ -3,20 +3,55 @@
     <head>
         <title>Sceintific Method</title>
         <style>
+            body{
+              background-color:#ffffff;
+            }
+            body.dark{
+              background-color:#1a1a1a;
+            }
             .c{
                 background-color:lightgreen;
             }
             .e{
-                background-color:lightyellow;
+                background-color:yellow;
             }
             .r{
-                background-color:lightred;
+                background-color:pink;
+            }
+            .h{
+              background-color:#00ffff;
             }
         </style>
+
+
+
+
+        <script>
+            // Wait for DOM to load before accessing elements
+            document.addEventListener('DOMContentLoaded', function() {
+                const bodyElement = document.body;
+                const lightButton = document.getElementById('light');
+                const darkButton = document.getElementById('dark');
+                
+                lightButton.addEventListener('click', function() {
+                    bodyElement.classList.remove('dark');
+                });
+                
+                darkButton.addEventListener('click', function() {
+                    bodyElement.classList.add('dark');
+                });
+            });
+        </script>
+
+
+
+
+
+
     </head>
     <body>
-        <h1>CER paragraph for 'Thank You M'am'</h1>
-        <h2>Claim</h2>
+        <h1><span class="h">CER paragraph for 'Thank You M'am'</span></h1>
+        <button id="light">Light Theme</button> <button id="dark">Dark Theme</button>
         <p>
             <span class="c">    In the story “Thank You M'am” by Langston Hughes, Mrs. Jones takes Roger home because she wants to teach him a lesson. </span>
             <span class="e">On page 3, lines 5 and 6, it states, “...a boy ran up behind her and tried to snatch her purse.” </span>
